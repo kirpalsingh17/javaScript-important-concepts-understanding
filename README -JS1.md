@@ -13,6 +13,8 @@ JavaScript is executed on the client side, meaning it runs in the user's web bro
 
 JavaScript is also widely used in server-side programming, such as with Node.js, which allows developers to use JavaScript for building scalable, networked applications. Additionally, JavaScript is commonly used in game development, desktop application development, and mobile app development.
 
+---
+
 #### What are the advantages of using JavaScript?
 There are several advantages of using JavaScript in web development:
 
@@ -28,6 +30,7 @@ Cross-platform compatibility: JavaScript runs on all modern web browsers and is 
 
 **SEO friendly:** JavaScript is search engine optimization (SEO) friendly, meaning that search engines can easily index content built with JavaScript, helping to improve a website's search engine ranking.
 
+---
 
 #### What are the disadvantages of using JavaScript?
 While JavaScript has many advantages, it also has some disadvantages that developers should consider:
