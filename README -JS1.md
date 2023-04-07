@@ -1,9 +1,3 @@
-
-# Project Title
-
-A brief description of what this project does and who it's for
-
-
 ## FAQ
 
 #### What is JavaScript?
@@ -410,7 +404,6 @@ In JavaScript, every object has a prototype, which is a reference to another obj
 
 The prototype chain is created by the prototype property of a constructor function. When you create a new object with a constructor function using the new keyword, the prototype of the new object is set to the constructor function's prototype property. For example:
 
-javascript
 ```javascript
 function Person(name, age) {
   this.name = name;
@@ -436,7 +429,6 @@ In JavaScript, an object is a collection of properties, where each property has 
 
 Object literals are the most common way to create objects in JavaScript, and they consist of a comma-separated list of name-value pairs enclosed in curly braces. For example:
 
-javascript
 ```javascript
 var person = {
   name: 'John',
@@ -452,9 +444,8 @@ var person = {
 ```
 In the example above, we create an object called person with four properties: name, age, address, and hobbies. The address property is an object itself, with its own set of properties, and the hobbies property is an array of strings.
 
-Constructor functions are another way to create objects in JavaScript, and they allow you to define a blueprint for creating similar objects. For example:
+**Constructor functions are another way to create objects in JavaScript,** and they allow you to define a blueprint for creating similar objects. For example:
 
-javascript
 ```javascript
 function Person(name, age) {
   this.name = name;
@@ -483,7 +474,6 @@ An object, on the other hand, is an unordered collection of properties, where ea
 
 Here is an example that shows the difference between an array and an object:
 
-javascript
 ```javascript
 var myArray = [1, 2, 3];
 var myObject = {a: 1, b: 2, c: 3};
@@ -507,7 +497,6 @@ Overall, arrays and objects in JavaScript have different use cases, and it's imp
 
 You can add an element to an array in JavaScript using the push() method, which adds one or more elements to the end of an array and returns the new length of the array. Here's an example:
 
-javascript
 ```javascript
 var myArray = [1, 2, 3];
 myArray.push(4);
@@ -518,7 +507,6 @@ In the example above, we define an array myArray containing three values, and th
 
 You can also add an element to the beginning of an array using the unshift() method, which adds one or more elements to the beginning of an array and returns the new length of the array. Here's an example:
 
-javascript
 ```javascript
 var myArray = [2, 3, 4];
 myArray.unshift(1);
@@ -529,7 +517,6 @@ In the example above, we define an array myArray containing three values, and th
 
 Finally, you can also add an element to a specific position in an array using the bracket notation ([]) and the index of the position where you want to insert the element. Here's an example:
 
-javascript
 ```javascript
 var myArray = [1, 2, 4];
 myArray[2] = 3;
@@ -545,9 +532,8 @@ In the example above, we define an array myArray containing three values, and th
 
 You can remove an element from an array in JavaScript using the splice() method, which changes the contents of an array by removing or replacing existing elements and/or adding new elements. The splice() method modifies the original array in place and returns an array containing the removed elements.
 
-The splice() method takes two parameters: the index of the element to remove and the number of elements to remove. Here's an example:
+The **splice() method** takes two parameters: the index of the element to remove and the number of elements to remove. Here's an example:
 
-javascript
 ```javascript
 var myArray = [1, 2, 3, 4];
 var removed = myArray.splice(1, 1);
@@ -559,7 +545,6 @@ In the example above, we define an array myArray containing four values, and the
 
 You can also remove multiple elements from an array by passing a larger number as the second parameter to the splice() method. For example:
 
-javascript
 ```javascript
 var myArray = [1, 2, 3, 4];
 var removed = myArray.splice(1, 2);
@@ -571,7 +556,6 @@ In the example above, we remove two elements starting at index 1, which removes 
 
 If you don't know the index of the element to remove, but you know its value, you can use the indexOf() method to find the index first, and then use the splice() method to remove the element at that index. For example:
 
-javascript
 ```javascript
 var myArray = [1, 2, 3, 4];
 var index = myArray.indexOf(3);
