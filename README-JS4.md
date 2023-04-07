@@ -1,21 +1,16 @@
-
-# Project Title
-
-A brief description of what this project does and who it's for
-
 #### What is event bubbling in JavaScript?
 
-Event bubbling is a concept in JavaScript that describes the way in which events propagate through the DOM (Document Object Model) tree. When an event is triggered on a particular element, it is first handled by that element's event listener. Then, the event "bubbles up" through the DOM hierarchy, triggering the event listeners of each ancestor element in turn, until it reaches the top of the tree (the document object).
+Event bubbling is a concept in JavaScript that describes the way in which **events propagate through the DOM (Document Object Model) tree.** When an event is triggered on a particular element, it is first handled by that element's event listener. Then, the event "bubbles up" through the DOM hierarchy, triggering the event listeners of each ancestor element in turn, until it reaches the top of the tree (the document object).
 
 For example, consider a web page with a nested hierarchy of elements: a div containing a paragraph, which in turn contains a span. If a user clicks on the span element, a "click" event is first handled by the span's event listener. Then, the event bubbles up to the paragraph's event listener, and finally to the div's event listener, and so on until it reaches the document object.
 
 Event bubbling can be useful for event delegation, which allows you to handle events on parent elements rather than on individual child elements. By handling events at a higher level in the DOM tree, you can avoid attaching event listeners to every single child element, which can improve performance and reduce code complexity.
 
-
+---
 
 #### How do you stop event bubbling in JavaScript?
 
-In JavaScript, you can stop event bubbling using the stopPropagation() method of the Event object. This method prevents the event from propagating further up the DOM tree.
+In JavaScript, you can stop event bubbling using the **stopPropagation()** method of the Event object. This method prevents the event from propagating further up the DOM tree.
 
 Here's an example of how to use stopPropagation() to stop event bubbling:
 
@@ -36,11 +31,11 @@ In this example, we have two elements: a child element and a parent element. Whe
 
 Note that while stopping event propagation can be useful in some cases, it can also lead to unexpected behavior if not used carefully. Make sure to test thoroughly and consider the implications of stopping event propagation before implementing it in your code.
 
-
+---
 
 #### What is event delegation in JavaScript?
 
-Event delegation is a technique in JavaScript that allows you to handle events on parent elements rather than on individual child elements. When an event is triggered on a child element, the event "bubbles up" to the parent element, where it can be handled by a single event listener. This can be more efficient than attaching event listeners to each individual child element, especially for large or dynamically generated sets of elements.
+Event delegation is a technique in JavaScript that allows you to **handle events on parent elements rather than on individual child elements**. When an event is triggered on a child element, the event "bubbles up" to the parent element, where it can be handled by a single event listener. This can be more efficient than attaching event listeners to each individual child element, especially for large or dynamically generated sets of elements.
 
 Here's an example of how to use event delegation in JavaScript:
 
@@ -60,6 +55,7 @@ By using event delegation, we can handle events on all child elements with a sin
 
 Event delegation can be especially useful for elements that are added to the DOM dynamically, since you don't need to attach an event listener to each new element individually. However, it's important to be mindful of the performance implications of using event delegation for large sets of elements, and to test your code thoroughly to ensure that events are being handled correctly.
 
+---
 
 #### How do you use event delegation in JavaScript?
 To use event delegation in JavaScript, you first need to attach an event listener to a parent element that contains the child elements you want to handle events for. When an event is triggered on a child element, the event "bubbles up" to the parent element, where it can be handled by the event listener.
@@ -84,7 +80,7 @@ Note that you can use any valid CSS selector to match child elements with event 
 
 Event delegation can be especially useful for elements that are added to the DOM dynamically, since you don't need to attach an event listener to each new element individually. However, it's important to be mindful of the performance implications of using event delegation for large sets of elements, and to test your code thoroughly to ensure that events are being handled correctly.
 
-
+---
 
 #### What is the difference between client-side and server-side JavaScript?
 Client-side JavaScript and server-side JavaScript are two distinct environments in which JavaScript code can be executed.
@@ -99,7 +95,7 @@ Another key difference is that client-side code is visible to users and can pote
 
 Overall, client-side and server-side JavaScript are both important tools for building modern web applications, and understanding their differences and strengths is essential for developing effective and secure web applications.
 
-
+---
 
 #### What is the difference between an object and a function in JavaScript?
 
@@ -115,10 +111,11 @@ It's also worth noting that functions can be properties of objects, which allows
 
 Overall, objects and functions are both important concepts in JavaScript, and understanding their differences is essential for writing effective and efficient code.
 
+---
 
 #### What is a singleton in JavaScript?
 
-In JavaScript, a singleton is a design pattern that restricts the instantiation of a class to a single instance and provides a global point of access to that instance. This means that only one instance of the singleton class can exist at a time, and all requests for the singleton return the same instance.
+In JavaScript, a singleton is a **design pattern that restricts the instantiation of a class to a single instance and provides a global point of access to that instance**. This means that only one instance of the singleton class can exist at a time, and all requests for the singleton return the same instance.
 
 Singletons are typically used in situations where it is important to ensure that only one instance of a class exists, such as managing shared resources or configuration settings. By using a singleton, you can avoid creating unnecessary instances of the class, which can improve performance and reduce the risk of errors.
 
@@ -155,6 +152,7 @@ When we call the getInstance method twice and compare the resulting instances, w
 
 Overall, the singleton pattern is a powerful tool for managing shared resources and ensuring that only one instance of a class exists. However, it's important to use singletons judiciously, since they can also introduce global state and create dependencies that are difficult to manage.
 
+---
 
 #### How do you create a singleton in JavaScript?
 
@@ -182,25 +180,27 @@ When we create two instances of the Singleton class and compare them using the s
 
 Overall, creating a singleton in JavaScript involves ensuring that only one instance of a class or object is created, and providing a global point of access to that instance. This can be achieved using a variety of techniques, such as using a static property, a closure, or a self-invoking function.
 
+---
+
 #### What is functional programming in JavaScript?
-Functional programming is a programming paradigm that emphasizes the use of functions to solve problems. In functional programming, functions are treated as first-class citizens, meaning they can be assigned to variables, passed as arguments to other functions, and returned as values from functions.
+Functional programming is a programming paradigm that **emphasizes the use of functions to solve problems.** In functional programming, functions are treated as first-class citizens, meaning they can be assigned to variables, passed as arguments to other functions, and returned as values from functions.
 
 In JavaScript, functional programming is supported through a variety of features, including higher-order functions, closures, and anonymous functions. Here are some key principles of functional programming in JavaScript:
 
-Pure Functions: A pure function is a function that returns a value based only on its input arguments, without modifying any external state or producing side effects. Pure functions are deterministic, meaning they always produce the same output for the same input.
-Immutability: Functional programming encourages immutability, or the use of data structures that cannot be modified once they are created. This helps to prevent unexpected side effects and makes it easier to reason about the behavior of functions.
-Higher-Order Functions: Higher-order functions are functions that take other functions as arguments or return functions as their result. Higher-order functions are a key feature of functional programming, since they allow for the composition of complex functionality from simpler building blocks.
-Recursion: Recursion is a technique where a function calls itself to solve a problem. Recursion is often used in functional programming to process data structures, since it can provide an elegant way to iterate over collections of data.
+**Pure Functions:** A pure function is a function that returns a value based only on its input arguments, without modifying any external state or producing side effects. Pure functions are deterministic, meaning they always produce the same output for the same input.
+**Immutability:** Functional programming encourages immutability, or the use of data structures that cannot be modified once they are created. This helps to prevent unexpected side effects and makes it easier to reason about the behavior of functions.
+**Higher-Order Functions:** Higher-order functions are functions that take other functions as arguments or return functions as their result. Higher-order functions are a key feature of functional programming, since they allow for the composition of complex functionality from simpler building blocks.
+**Recursion:** Recursion is a technique where a function calls itself to solve a problem. Recursion is often used in functional programming to process data structures, since it can provide an elegant way to iterate over collections of data.
+
 Overall, functional programming is a powerful approach to programming that can help to reduce bugs, improve code readability, and make it easier to reason about the behavior of functions. While JavaScript was not originally designed for functional programming, the language has evolved to support many functional programming concepts, making it a popular choice for functional programming enthusiasts.
 
-
+---
 
 #### How do you write functional programming code in JavaScript?
 
-
 In JavaScript, there are several ways to write functional programming code. Here are some common techniques:
 
-Use Pure Functions: Write functions that take input arguments and return a value, without modifying any external state or producing side effects. Pure functions are deterministic and easy to reason about.
+**Use Pure Functions:** Write functions that take input arguments and return a value, without modifying any external state or producing side effects. Pure functions are deterministic and easy to reason about.
 ```javascript
 
 // Example of a pure function
@@ -208,13 +208,13 @@ function add(x, y) {
   return x + y;
 }
 ```
-Use Immutability: Use data structures that cannot be modified once they are created. This can help to prevent unexpected side effects and make your code easier to reason about.
+**Use Immutability:** Use data structures that cannot be modified once they are created. This can help to prevent unexpected side effects and make your code easier to reason about.
 ```javascript
 // Example of using immutability with an array
 const arr = [1, 2, 3];
 const newArr = [...arr, 4]; // creates a new array with 4 added to the end
 ```
-Use Higher-Order Functions: Write functions that take other functions as arguments or return functions as their result. This can allow you to compose complex functionality from simpler building blocks.
+**Use Higher-Order Functions:** Write functions that take other functions as arguments or return functions as their result. This can allow you to compose complex functionality from simpler building blocks.
 ```javascript
 // Example of using a higher-order function
 function map(arr, fn) {
@@ -228,7 +228,7 @@ function map(arr, fn) {
 const numbers = [1, 2, 3];
 const doubledNumbers = map(numbers, x => x * 2);
 ```
-Use Recursion: Write functions that call themselves to solve a problem. This can provide an elegant way to iterate over collections of data.
+**Use Recursion:** Write functions that call themselves to solve a problem. This can provide an elegant way to iterate over collections of data.
 ```javascript
 // Example of using recursion to calculate the factorial of a number
 function factorial(n) {
@@ -243,15 +243,17 @@ const result = factorial(5); // returns 120
 ```
 Overall, writing functional programming code in JavaScript involves using pure functions, immutability, higher-order functions, recursion, and other functional programming concepts to solve problems. By using these techniques, you can write code that is more modular, easier to test, and less prone to bugs.
 
+---
+
 #### What is the difference between imperative and declarative programming in JavaScript?
 
-Imperative programming is a programming paradigm that focuses on how to accomplish a task. It involves explicitly listing out the steps that the program should take to achieve a particular goal. In imperative programming, you often have to manage the state of the program manually, which can lead to code that is difficult to reason about and prone to errors.
+Imperative programming is a programming paradigm that **focuses on how to accomplish a task.** It involves explicitly listing out the steps that the program should take to achieve a particular goal. In imperative programming, you often have to manage the state of the program manually, which can lead to code that is difficult to reason about and prone to errors.
 
-Declarative programming, on the other hand, is a programming paradigm that focuses on what you want the program to accomplish, without specifying how to achieve it. Instead of listing out the steps, you declare the desired outcome and let the underlying system figure out how to achieve it. Declarative programming is often associated with higher-level abstractions, such as functional programming or SQL, and can lead to more concise, modular, and maintainable code.
+Declarative programming, on the other hand, is a programming paradigm that **focuses on what you want the program to accomplish, without specifying how to achieve it.** Instead of listing out the steps, you declare the desired outcome and let the underlying system figure out how to achieve it. Declarative programming is often associated with higher-level abstractions, such as functional programming or SQL, and can lead to more concise, modular, and maintainable code.
 
 In JavaScript, you can see the difference between imperative and declarative programming in the way you write code to solve a problem. Here's an example:
 
-Imperative Approach:
+**Imperative Approach:**
 
 ```javascript
 // Example of imperative approach to finding the sum of an array of numbers
@@ -263,7 +265,7 @@ function sum(arr) {
   return total;
 }
 ```
-Declarative Approach:
+**Declarative Approach:**
 
 ```javascript
 // Example of declarative approach to finding the sum of an array of numbers
@@ -275,18 +277,19 @@ In the imperative approach, we are explicitly iterating over the array and keepi
 
 Overall, declarative programming can lead to more concise, modular, and maintainable code, while imperative programming can provide more control and fine-grained management of the program state.
 
+---
 
 #### How do you write declarative programming code in JavaScript?
 
 Declarative programming in JavaScript is all about focusing on what you want the program to accomplish, without specifying how to achieve it. Here are some common techniques for writing declarative programming code in JavaScript:
 
-Use Higher-Order Functions: Higher-order functions are functions that take other functions as arguments or return functions as their result. This can allow you to compose complex functionality from simpler building blocks. Examples of higher-order functions include map(), filter(), and reduce().
+**Use Higher-Order Functions:** Higher-order functions are functions that take other functions as arguments or return functions as their result. This can allow you to compose complex functionality from simpler building blocks. Examples of higher-order functions include map(), filter(), and reduce().
 ```javascript
 // Example of using the map() higher-order function
 const numbers = [1, 2, 3];
 const doubledNumbers = numbers.map(x => x * 2);
 ```
-Use Declarative Syntax: Use declarative syntax when possible, such as template literals, object destructuring, and array destructuring. Declarative syntax can make your code more readable and expressive.
+**Use Declarative Syntax:** Use declarative syntax when possible, such as template literals, object destructuring, and array destructuring. Declarative syntax can make your code more readable and expressive.
 ```javascript
 // Example of using template literals to construct a string
 const name = "Alice";
@@ -300,13 +303,13 @@ const { name, age } = person;
 const numbers = [1, 2, 3];
 const [first, second, third] = numbers;
 ```
-Use Immutability: Use data structures that cannot be modified once they are created. This can help to prevent unexpected side effects and make your code easier to reason about.
+**Use Immutability:** Use data structures that cannot be modified once they are created. This can help to prevent unexpected side effects and make your code easier to reason about.
 ```javascript
 // Example of using immutability with an array
 const arr = [1, 2, 3];
 const newArr = [...arr, 4]; // creates a new array with 4 added to the end
 ```
-Use Pure Functions: Write functions that take input arguments and return a value, without modifying any external state or producing side effects. Pure functions are deterministic and easy to reason about.
+**Use Pure Functions:** Write functions that take input arguments and return a value, without modifying any external state or producing side effects. Pure functions are deterministic and easy to reason about.
 ```javascript
 // Example of a pure function
 function add(x, y) {
@@ -315,10 +318,11 @@ function add(x, y) {
 ```
 By using these techniques, you can write code that is more declarative, modular, and easier to reason about.
 
+---
 
 #### What is a monad in JavaScript?
 
-A monad is a design pattern in functional programming that allows you to chain computations together while encapsulating side effects. It provides a way to manage the complexity of asynchronous and impure code by providing a consistent way to represent and manipulate data.
+A monad is a design pattern in functional programming that allows you to **chain computations together while encapsulating side effects.** It provides a way to manage the complexity of asynchronous and impure code by providing a consistent way to represent and manipulate data.
 
 In JavaScript, a monad is usually implemented as an object with two key methods: flatMap (also known as bind) and map. The flatMap method allows you to chain computations together, while the map method allows you to apply a function to the underlying data.
 
@@ -359,6 +363,7 @@ In this example, we've defined a simple Maybe monad that can represent values th
 
 Overall, monads can be a powerful way to manage the complexity of asynchronous and impure code in JavaScript, by providing a consistent and composable way to represent and manipulate data. However, they can also be somewhat difficult to understand and use correctly, so they may not be appropriate for every situation.
 
+---
 
 #### How do you use a monad in JavaScript?
 
@@ -376,9 +381,10 @@ In this example, we first create a new instance of the Maybe monad with the valu
 
 Note that in order to use the Maybe monad, we need to define it first. In this case, we've defined a simple Maybe class with flatMap and map methods, but there are many other monads that can be used in different situations. When working with monads, it's important to understand their behavior and limitations, and to use them appropriately for the problem at hand.
 
+---
 
 #### What is a functor in JavaScript?
-In functional programming, a functor is an object that implements a map method, which allows you to apply a function to the values inside the functor. Functors are a way to generalize the concept of mapping over a collection to other types of data structures, such as Maybe, Either, and Promise.
+In functional programming, a **functor is an object that implements a map method, which allows you to apply a function to the values inside the functor.** Functors are a way to generalize the concept of mapping over a collection to other types of data structures, such as Maybe, Either, and Promise.
 
 In JavaScript, an object is considered a functor if it has a map method that takes a function as its argument, and returns a new functor with the result of applying the function to the original value. Here's an example of a simple functor in JavaScript:
 
@@ -405,7 +411,7 @@ In this example, we've defined a simple Box functor that wraps a value and allow
 
 Overall, functors can be a useful abstraction for working with a variety of data structures in a functional programming style, and can help to simplify and generalize common patterns of transformation and manipulation.
 
-
+---
 
 #### How do you use a functor in JavaScript?
 
@@ -423,10 +429,11 @@ In this example, we first create a new instance of the Box functor with the valu
 
 Note that when working with functors, it's important to follow the rules of the functor laws, which ensure that the map method behaves in a predictable and consistent way. In particular, the first law requires that calling map with the identity function should return the original functor unchanged, and the second law requires that composing two functions and then mapping with the result should be equivalent to mapping with the first function and then mapping with the second. By following these laws, you can ensure that your functor behaves properly and is compatible with other functional programming concepts and patterns.
 
+---
 
 #### What is a monoid in JavaScript?
 
-In functional programming, a monoid is a set of values along with a binary operation and an identity element, that satisfies certain properties. Specifically, the binary operation must be associative and must have an identity element that acts as a neutral element under the operation. Monoids are a useful abstraction for working with many different types of data, and can help to simplify and generalize common patterns of aggregation and combination.
+In functional programming, **a monoid is a set of values along with a binary operation and an identity element, that satisfies certain properties.** Specifically, the binary operation must be associative and must have an identity element that acts as a neutral element under the operation. Monoids are a useful abstraction for working with many different types of data, and can help to simplify and generalize common patterns of aggregation and combination.
 
 In JavaScript, there are many examples of monoids, such as numbers with addition as the binary operation and 0 as the identity element, or strings with concatenation as the binary operation and the empty string as the identity element.
 
@@ -450,6 +457,7 @@ In this example, we've defined a simple Sum monoid that wraps a value and allows
 
 Overall, monoids can be a powerful abstraction for working with many different types of data in a functional programming style, and can help to simplify and generalize common patterns of aggregation and combination.
 
+---
 
 #### How do you use a monoid in JavaScript?
 To use a monoid in JavaScript, you typically create an instance of the monoid with an initial value, and then combine it with other instances of the same monoid using the concat method. The concat method should return a new instance of the monoid with the result of combining the values of the two original instances.
