@@ -19,6 +19,7 @@ JavaScript is also widely used in server-side programming, such as with Node.js,
 There are several advantages of using JavaScript in web development:
 
 **Client-side execution:** JavaScript runs in the user's web browser, which means it doesn't require server-side processing, reducing the workload on the server.
+
 **Interactivity:** JavaScript allows developers to create dynamic, interactive web pages that respond to user actions, such as clicking buttons or scrolling.
 
 **Versatility:** JavaScript can be used for a wide variety of tasks, from simple animations to complex, interactive web applications.
@@ -35,37 +36,41 @@ Cross-platform compatibility: JavaScript runs on all modern web browsers and is 
 #### What are the disadvantages of using JavaScript?
 While JavaScript has many advantages, it also has some disadvantages that developers should consider:
 
-Browser compatibility issues: Different web browsers may interpret JavaScript code differently, which can result in unexpected behavior or errors. This means developers must test their code thoroughly on different browsers to ensure compatibility.
+**Browser compatibility issues:** Different web browsers may interpret JavaScript code differently, which can result in unexpected behavior or errors. This means developers must test their code thoroughly on different browsers to ensure compatibility.
 
-Security risks: JavaScript is executed on the client side, which means it can be manipulated by users or malicious scripts, creating security vulnerabilities.
-Performance issues: Heavy use of JavaScript can slow down the performance of a website, especially on older devices or slower internet connections.
+**Security risks:** JavaScript is executed on the client side, which means it can be manipulated by users or malicious scripts, creating security vulnerabilities.
 
-Lack of standardization: While there are industry standards for JavaScript, there is also a lot of variation in coding practices and frameworks, which can make it challenging for developers to maintain consistency across projects.
+**Performance issues:** Heavy use of JavaScript can slow down the performance of a website, especially on older devices or slower internet connections.
 
-Debugging challenges: Debugging JavaScript code can be difficult, especially when working with complex applications or codebases.
+**Lack of standardization:** While there are industry standards for JavaScript, there is also a lot of variation in coding practices and frameworks, which can make it challenging for developers to maintain consistency across projects.
 
-Limited functionality: JavaScript has some limitations when it comes to accessing system resources, such as the file system or hardware, which can limit its functionality for certain types of applications.
+**Debugging challenges:** Debugging JavaScript code can be difficult, especially when working with complex applications or codebases.
 
-Accessibility concerns: JavaScript can create accessibility issues for users with disabilities, such as those using assistive technology or screen readers, if not implemented properly.
+**Limited functionality:** JavaScript has some limitations when it comes to accessing system resources, such as the file system or hardware, which can limit its functionality for certain types of applications.
+
+**Accessibility concerns:** JavaScript can create accessibility issues for users with disabilities, such as those using assistive technology or screen readers, if not implemented properly.
+
+---
 
 #### How do you declare a variable in JavaScript?
 In JavaScript, you can declare a variable using the var, let, or const keywords. Here's an example of each:
 
-var: The var keyword is used to declare a variable with function scope or global scope. Here's an example:
+**var:** The var keyword is used to declare a variable with function scope or global scope. Here's an example:
 
 ```javascript
 var myVariable = 10;
 ```
-let: The let keyword is used to declare a variable with block scope. Here's an example:
+**let:** The let keyword is used to declare a variable with block scope. Here's an example:
 ```javascript
 let myVariable = 10;
 ```
-const: The const keyword is used to declare a variable that cannot be reassigned. Here's an example:
+**const:** The const keyword is used to declare a variable that cannot be reassigned. Here's an example:
 ```javascript
 const myVariable = 10;
 ```
 In all three cases, myVariable is the name of the variable, and 10 is the initial value assigned to it.
 
+---
 
 #### What is the difference between let and var in JavaScript?
 
@@ -99,11 +104,13 @@ function myOtherFunction() {
 ```
 In the first function, var x is re-declared inside the if statement, which also changes the value of the original x variable declared outside of the if statement. In the second function, let y creates a new variable inside the if statement, which does not affect the original y variable declared outside of the if statement.
 
+---
+
 #### What is the difference between == and === in JavaScript?
 
 In JavaScript, == and === are both used for comparison, but they behave differently.
 
-== is the equality operator and checks whether the two operands are equal in value, after performing any necessary type conversions. If the operands are of different data types, JavaScript will try to convert them to a common type before making the comparison. This can sometimes lead to unexpected results.
+**==** is the equality operator and checks whether the two operands are equal in value, after performing any necessary type conversions. If the operands are of different data types, JavaScript will try to convert them to a common type before making the comparison. This can sometimes lead to unexpected results.
 
 For example:
 ```javascript
@@ -112,7 +119,7 @@ console.log(5 == "5"); // Output: true
 
 In this case, 5 and "5" are not the same data type, but JavaScript automatically converts the string "5" to the number 5 before making the comparison.
 
-=== is the strict equality operator and checks whether the two operands are equal in both value and data type. If the operands are of different data types, === returns false without trying to convert them to a common type.
+**===** is the strict equality operator and checks whether the two operands are equal in both value and data type. If the operands are of different data types, === returns false without trying to convert them to a common type.
 
 For example:
 ```javascript
@@ -122,6 +129,8 @@ console.log(5 === "5"); // Output: false
 In this case, 5 and "5" are not the same data type, so === returns false without trying to convert them to a common type.
 
 In general, it's recommended to use === for comparisons in JavaScript, as it provides a more strict and predictable comparison. However, there may be cases where == is more appropriate, depending on the specific needs of your code.
+
+---
 
 #### How do you create a function in JavaScript?
 
@@ -143,15 +152,17 @@ console.log(result); // Output: 15
 
 In this example, the addNumbers function is called with the arguments 5 and 10, which are passed to the num1 and num2 parameters, respectively. The result variable is then assigned the value returned by the function, which is 15.
 
+---
+
 #### What is an event in JavaScript?
 In JavaScript, an event is an action or occurrence that happens in the browser, such as a user clicking on a button, submitting a form, or loading a page. Events can be detected and handled using event listeners, which are functions that are executed in response to a specific event.
 
 There are many types of events that can occur in the browser, such as:
 
-Mouse events, such as click, mousemove, and mouseover.
-Keyboard events, such as keydown, keyup, and keypress.
-Form events, such as submit, reset, and change.
-Document and window events, such as load, unload, and resize.
+**Mouse events,** such as click, mousemove, and mouseover.
+**Keyboard events,** such as keydown, keyup, and keypress.
+**Form events,** such as submit, reset, and change.
+**Document and window events,** such as load, unload, and resize.
 To handle an event in JavaScript, you can use the addEventListener() method to attach an event listener to a specific HTML element. The first argument to addEventListener() is the name of the event you want to handle, and the second argument is the function that will be executed when the event occurs.
 
 Here's an example that shows how to handle a click event on a button element:
@@ -167,8 +178,10 @@ button.addEventListener("click", function() {
   console.log("Button clicked!");
 });
 ```
+
 In this example, the getElementById() method is used to retrieve the button element from the HTML document, and the addEventListener() method is used to attach a click event listener to the button. When the button is clicked, the function passed as the second argument to addEventListener() is executed, which logs a message to the console.
 
+---
 
 #### What is a callback function in JavaScript?
 In JavaScript, a callback function is a function that is passed as an argument to another function and is executed inside that function. Callback functions are often used to perform some action after a specific task is completed, such as fetching data from a server or executing an animation.
@@ -195,6 +208,8 @@ In this example, the doSomething() function takes a callback function as an argu
 
 Callbacks are a powerful feature of JavaScript that enable asynchronous programming and help to avoid blocking the main thread. They are often used in combination with other JavaScript features such as promises, async/await, and event listeners to create complex and dynamic web applications.
 
+---
+
 #### What is the difference between synchronous and asynchronous code in JavaScript?
 
 In JavaScript, synchronous code is executed in a sequential manner, meaning that each statement is executed one after the other in the order they appear in the code. When a synchronous operation is performed, the program waits for it to complete before continuing to execute the next statement.
@@ -205,7 +220,7 @@ One way to implement asynchronous code in JavaScript is to use callback function
 
 Another way to implement asynchronous code in JavaScript is to use promises. Promises are objects that represent the eventual completion or failure of an asynchronous operation, and can be used to handle asynchronous code in a more structured and readable way.
 
-Here's an example of synchronous code that calculates the sum of two numbers:
+Here's an **example of synchronous code** that calculates the sum of two numbers:
 ```javascript
 function addNumbers(num1, num2) {
   return num1 + num2;
@@ -217,7 +232,7 @@ console.log(result); // Output: 15
 
 In this example, the addNumbers() function is executed synchronously, and the program waits for the function to complete before logging the result to the console.
 
-Here's an example of asynchronous code that reads data from a file using callbacks:
+Here's an **example of asynchronous code** that reads data from a file using callbacks:
 ```javascript
 const fs = require("fs");
 
@@ -229,6 +244,8 @@ fs.readFile("data.txt", "utf8", function(err, data) {
 console.log("Reading file..."); // This statement is executed before the file is read
 ```
 In this example, the fs.readFile() function is executed asynchronously, and the program continues executing the next statement after calling the function. When the file is read, the callback function is executed, and the contents of the file are logged to the console.
+
+---
 
 #### What is a closure in JavaScript?
 In JavaScript, a closure is created when a function is defined within another function (also known as the outer function) and the inner function has access to the outer function's variables, parameters, and scope chain.
@@ -256,6 +273,8 @@ In this example, outerFunction creates a variable outerVariable and defines an i
 When outerFunction is called and the returned function is assigned to innerFunc, outerVariable is still accessible to innerFunction even though outerFunction has finished executing. When innerFunc is called, it logs the value of outerVariable to the console.
 
 This is a simple example of a closure in JavaScript.
+
+---
 
 #### What is the difference between null and undefined in JavaScript?
 
@@ -287,12 +306,14 @@ console.log(myObj.name); // Output: null
 In the example above, myVar is assigned the value null, indicating that it intentionally has no value. myObj.name is also assigned the value null, indicating that the name property of the myObj object intentionally has no value.
 
 In summary, undefined is used to represent the absence of a value when a value is expected, while null is used to represent the intentional absence of any object value.
+
+---
+
 #### How do you check if a variable is undefined in JavaScript?
 
 In JavaScript, there are a few ways to check if a variable is undefined:
 
-Using the typeof operator:
-javascript
+Using the **typeof operator**:
 ```javascript
 var myVar;
 if (typeof myVar === 'undefined') {
@@ -302,7 +323,6 @@ if (typeof myVar === 'undefined') {
 The typeof operator returns a string representing the data type of the variable. When the variable has not been assigned a value, or has been explicitly assigned the value undefined, typeof returns the string "undefined". This can be used to check if the variable is undefined.
 
 Using strict equality with the undefined value:
-javascript
 ```javascript
 var myVar;
 if (myVar === undefined) {
@@ -313,18 +333,19 @@ In JavaScript, undefined is a global variable that represents the undefined valu
 
 It's worth noting that it's generally recommended to use the typeof approach, as using undefined directly can be error-prone. If a variable has not been declared, referencing it directly will result in a reference error. For example:
 
-javascript
 ```javascript
 if (myVar === undefined) {
   console.log('myVar is undefined');
 }
-```
 // ReferenceError: myVar is not defined
+```
 To avoid this error, it's best to use the typeof approach.
-How do you check if a variable is null in JavaScript?
+
+---
+
+#### How do you check if a variable is null in JavaScript?
 In JavaScript, you can check if a variable is null using the strict equality operator (===) to compare it to the null value:
 
-javascript
 ```javascript
 var myVar = null;
 if (myVar === null) {
@@ -335,7 +356,6 @@ When a variable is explicitly assigned the value null, it is equal to the null v
 
 It's important to note that if a variable has not been declared or defined, attempting to compare it to null will result in a reference error. For example:
 
-javascript
 ```javascript
 if (myVar === null) {
   console.log('myVar is null');
@@ -352,13 +372,14 @@ if (myVar && myVar === null) {
 ```
 In the example above, the first part of the condition checks if myVar is truthy (i.e. not null, undefined, 0, false, or an empty string), and the second part checks if it is explicitly equal to null. If myVar is not truthy, the second part of the condition will not be evaluated, avoiding a reference error.
 
+---
+
 #### What is the difference between null and NaN in JavaScript?
 
 In JavaScript, null and NaN are both values that represent the absence of a value, but they are used in different situations.
 
 null is a value that represents the intentional absence of any object value. It is often used to indicate that a variable should have no value or that an object property should be empty. For example:
 
-javascript
 ```javascript
 var myVar = null;
 console.log(myVar); // Output: null
@@ -370,7 +391,6 @@ In the example above, myVar is assigned the value null, indicating that it inten
 
 On the other hand, NaN stands for "Not a Number" and is a special value in JavaScript that represents an invalid or unrepresentable mathematical value. It is typically the result of a mathematical operation that cannot be performed, such as dividing by zero or trying to perform arithmetic on non-numeric data types. For example:
 
-javascript
 ```javascript
 var result = 1 / 0;
 console.log(result); // Output: Infinity
@@ -382,6 +402,7 @@ In the example above, result is assigned the value Infinity, which is the result
 
 In summary, null is used to represent the intentional absence of any object value, while NaN is used to represent an invalid or unrepresentable mathematical value.
 
+---
 
 #### What is a prototype in JavaScript?
 
@@ -407,6 +428,7 @@ In the example above, we define a Person constructor function that takes a name 
 
 Prototypes are powerful and flexible, as they allow you to create objects that inherit properties and methods from other objects, which can reduce code duplication and make your code more modular and reusable. However, it's important to be aware of the prototype chain and understand how it affects the behavior of your code.
 
+---
 
 #### What is an object in JavaScript?
 
@@ -449,6 +471,7 @@ In the example above, we define a Person constructor function that takes a name 
 
 Overall, objects in JavaScript are a fundamental concept that allow you to store and manipulate data in a flexible and powerful way.
 
+---
 
 #### What is the difference between an array and an object in JavaScript?
 
@@ -477,6 +500,8 @@ console.log(myObject); // Output: {a: 1, b: 2, c: 3, d: 4}
 In the example above, we define an array myArray and an object myObject, both containing the same set of values. We access the second value of the array using its index (myArray[1]) and the second property of the object using its name (myObject.b). We then add a new value to the array using the push() method and a new property to the object using dot notation (myObject.d = 4). Finally, we print the modified array and object to the console.
 
 Overall, arrays and objects in JavaScript have different use cases, and it's important to understand their differences and choose the appropriate data structure for your needs.
+
+---
 
 #### How do you add an element to an array in JavaScript?
 
@@ -513,6 +538,7 @@ console.log(myArray); // Output: [1, 2, 3, 4]
 ```
 In the example above, we define an array myArray containing three values, and then we replace the value at index 2 with the value 3 using bracket notation (myArray[2] = 3). We then print the modified array to the console.
 
+---
 
 #### How do you remove an element from an array in JavaScript?
 
