@@ -1,5 +1,3 @@
-## FAQ
-
 #### What is JavaScript?
 JavaScript is a high-level, dynamic programming language that is used mainly for web development. It allows developers to create interactive and dynamic web pages by adding interactivity, animations, and other dynamic elements to the webpage.
 
