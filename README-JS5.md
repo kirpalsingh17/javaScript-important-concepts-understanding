@@ -1,10 +1,5 @@
-
-# Project Title
-
-A brief description of what this project does and who it's for
-
 #### What is the difference between prototypal and classical inheritance in JavaScript?
-JavaScript supports both prototypal and classical inheritance, but the language's prototypal inheritance is more flexible and powerful than classical inheritance.
+JavaScript **supports both prototypal and classical inheritance,** but the language's prototypal inheritance is more flexible and powerful than classical inheritance.
 
 Classical inheritance is the approach used in languages such as Java, C++, and Python. It involves defining classes and then creating instances of those classes. The instances inherit properties and methods from their parent classes, and new classes can be created by extending existing classes. Classical inheritance is typically implemented using the "class" keyword in modern JavaScript.
 
@@ -14,11 +9,9 @@ One advantage of prototypal inheritance is that it allows for more dynamic and f
 
 In summary, while classical inheritance involves defining classes and creating instances of those classes, prototypal inheritance involves creating objects that inherit directly from other objects. Prototypal inheritance allows for more flexible and dynamic object relationships, while classical inheritance provides a more structured and familiar approach for developers coming from other languages.
 
-
-
+---
 
 #### How do you implement prototypal inheritance in JavaScript?
-
 
 In JavaScript, prototypal inheritance can be implemented using the prototype property of functions and the Object.create() method. Here's an example:
 
@@ -59,6 +52,7 @@ In this example, we define a Parent constructor function that sets a name proper
 
 Finally, we create an instance of the Child object and use the inherited greet and info methods. The child1.greet() method call prints "Hello, my name is Alice" to the console, and the child1.info() method call prints "Alice is 5 years old".
 
+---
 
 #### How do you implement classical inheritance in JavaScript?
 
@@ -140,17 +134,18 @@ In this example, we define a Parent constructor function that sets a name proper
 
 Finally, we create an instance of the Child object and use the inherited greet and info methods.
 
-
+---
 
 #### What is the difference between a closure and a module in JavaScript?
 
 Both closures and modules are powerful concepts in JavaScript that can be used to encapsulate functionality and create reusable code. However, they serve slightly different purposes:
 
-A closure is a function that has access to its outer function's variables, even after the outer function has returned. The closure "closes over" these variables and maintains a reference to them. This allows the closure to access and modify the outer function's variables, even when it's called outside the scope of the outer function.
-A module is a pattern used to encapsulate related code into a single unit of code, called a module. Modules can be used to hide implementation details and create a clean, organized interface for interacting with the code. A module can contain functions, variables, and classes, and can be used to prevent naming collisions and create reusable code.
++ A closure is a function that has access to its outer function's variables, even after the outer function has returned. The closure "closes over" these variables and maintains a reference to them. This allows the closure to access and modify the outer function's variables, even when it's called outside the scope of the outer function.
++ A module is a pattern used to encapsulate related code into a single unit of code, called a module. Modules can be used to hide implementation details and create a clean, organized interface for interacting with the code. A module can contain functions, variables, and classes, and can be used to prevent naming collisions and create reusable code.
+
 In other words, closures are a way of creating a private state within a function, while modules are a way of creating a private namespace for related functions and variables.
 
-Here's an example of a closure:
+**Here's an example of a closure:**
 
 ```javascript
 function makeCounter() {
@@ -167,8 +162,7 @@ counter1(); // logs 2
 ```
 In this example, makeCounter is a function that returns another function that has access to the count variable declared in the outer function. Each time the inner function is called, it increments the count variable and logs its value to the console. Because makeCounter returns a function that maintains a reference to count, the count variable persists between function calls, creating a closure.
 
-Here's an example of a module:
-
+**Here's an example of a module:**
 ```javascript
 var myModule = (function() {
   var privateVar = "This variable is private";
@@ -201,7 +195,7 @@ In this example, we're using an immediately-invoked function expression (IIFE) t
 
 When we invoke the IIFE, we get back an object representing our module, which we can then use to access the public variables and functions. The private variables and functions remain hidden and cannot be accessed from outside the module.
 
-
+---
 
 #### How do you use the this keyword in JavaScript?
 
@@ -266,12 +260,12 @@ sayHello.apply(person2); // logs "Hello, my name is Jane"
 ```
 In the above example, we're calling the sayHello function with call and apply, and passing in different objects as the first argument. This sets the value of this to the respective objects, allowing us to log the correct names.
 
-
+---
 
 #### What is the difference between call, apply, and bind in JavaScript?
 In JavaScript, call, apply, and bind are methods that can be used to set the value of this inside a function. Here's a brief overview of each method:
 
-call: The call method is used to invoke a function and explicitly set the value of this. It takes the object that this should refer to as its first argument, followed by any arguments that the function should be called with. For example:
+**call:** The call method is used to invoke a function and explicitly set the value of this. It takes the object that this should refer to as its first argument, followed by any arguments that the function should be called with. For example:
 ```javascript
 function sayHello() {
   console.log("Hello, my name is " + this.name);
@@ -281,7 +275,7 @@ var person = { name: "John" };
 
 sayHello.call(person); // logs "Hello, my name is John"
 ```
-apply: The apply method is similar to call, but it takes an array of arguments instead of individual arguments. This can be useful when the number of arguments is unknown or varies. For example:
+**apply:** The apply method is similar to call, but it takes an array of arguments instead of individual arguments. This can be useful when the number of arguments is unknown or varies. For example:
 ```javascript
 function sum(a, b, c) {
   return a + b + c;
@@ -293,7 +287,7 @@ var result = sum.apply(null, numbers);
 
 console.log(result); // logs 6
 ```
-bind: The bind method returns a new function with this bound to a specific object. It does not call the original function immediately, but instead returns a new function that can be called later. This can be useful when you want to create a new function with a fixed value of this. For example:
+**bind:** The bind method returns a new function with this bound to a specific object. It does not call the original function immediately, but instead returns a new function that can be called later. This can be useful when you want to create a new function with a fixed value of this. For example:
 ```javascript
 var person = {
   name: "John",
@@ -310,8 +304,7 @@ Note that bind does not change the value of this in the original function, but i
 
 In summary, call and apply are used to invoke a function with a specific value of this, while bind is used to create a new function with a fixed value of this.
 
-
-
+---
 
 #### How do you use the apply method in JavaScript?
 
@@ -334,7 +327,7 @@ We then call the apply method on the greet function, passing in the person objec
 
 The result is that the greet function is called with this set to the person object, and the output is logged to the console: "Hello John!".
 
-
+---
 
 #### How do you use the bind method in JavaScript?
 
@@ -360,10 +353,9 @@ When we call the sayHelloToJohn function, it calls the greet method with this se
 
 Note that the bind method does not call the original function immediately, but instead returns a new function that can be called later with the bound this value and any additional arguments.
 
-
+---
 
 #### What is a factory function in JavaScript?
-
 
 In JavaScript, a factory function is a function that returns an object without the use of the new keyword. It is a design pattern used for creating objects with a similar structure or behavior, without the need to create a class or constructor function.
 
@@ -393,9 +385,9 @@ We then use the createPerson function to create two person objects, john and jan
 
 The advantage of using a factory function is that it allows for the creation of objects with private state and behavior, without exposing them to the outside world. This can help to avoid naming collisions and other issues that can arise when working with global variables or shared state.
 
+---
 
 #### How do you use a factory function in JavaScript?
-
 
 In JavaScript, you can use a factory function to create objects with a similar structure or behavior, without the use of a class or constructor function. Here's an example of how to use a factory function:
 
@@ -422,6 +414,7 @@ We then use the createPerson function to create two person objects, john and jan
 
 One advantage of using a factory function is that it allows you to create objects with private state and behavior, which can help to avoid naming collisions and other issues that can arise when working with global variables or shared state.
 
+---
 
 #### What is a promise in JavaScript?
 
@@ -455,7 +448,7 @@ We then use the then method to handle the fulfilled state of the promise and the
 
 Promises can be chained together using the then method, allowing for more complex asynchronous operations to be handled in a more readable way.
 
-
+---
 
 #### How do you use a promise in JavaScript?
 
@@ -494,7 +487,7 @@ We then use the fetchData function to fetch data from the API and handle the res
 
 Promises can be chained together using the then method, allowing for more complex asynchronous operations to be handled in a more readable and maintainable way.
 
-
+---
 
 #### What is a callback function in JavaScript?
 
@@ -520,7 +513,7 @@ We then call the greet function with the name "Alice" and the sayGoodbye functio
 
 Callbacks are commonly used in JavaScript to handle asynchronous operations, such as fetching data from a server or waiting for a user action to complete. They are often passed as arguments to functions such as setTimeout, setInterval, and fetch.
 
-
+---
 
 #### How do you use a callback function in JavaScript?
 
@@ -550,10 +543,9 @@ We then call the fetchData function with the URL "https://example.com/api/data" 
 
 Callbacks can be used in many ways in JavaScript, such as to handle user interactions, animations, and other asynchronous operations. They are a powerful tool for writing flexible and reusable code.
 
-
+---
 
 #### What is the difference between a callback function and a promise in JavaScript?
-
 
 The primary difference between a callback function and a promise in JavaScript is how they handle asynchronous operations and their resulting values.
 
@@ -598,9 +590,9 @@ In the second example, we define the same fetchData function, but instead of usi
 
 In general, Promises are preferred over callbacks because they provide a cleaner and more expressive way of handling asynchronous operations, and they allow you to chain multiple asynchronous operations together.
 
+---
 
 #### What is the difference between a promise and an observable in JavaScript?
-
 
 Promises and Observables are both used to handle asynchronous operations in JavaScript, but they have some key differences.
 
@@ -610,10 +602,10 @@ On the other hand, Observables represent a stream of values that will be availab
 
 Here are some key differences between Promises and Observables:
 
-Multiple values: Observables can emit zero, one, or multiple values over time, whereas Promises can only resolve with a single value.
-Lazy execution: Observables are lazily executed, which means that they will only start emitting values when they are subscribed to. Promises are eagerly executed, which means that they start executing as soon as they are created.
-Cancellation: Observables can be cancelled, which means that they will stop emitting values and release any resources they are using. Promises cannot be cancelled.
-Error handling: Observables allow you to handle errors in a more flexible way, by using operators like catchError and retry. Promises only allow you to handle errors using the catch method.
+**Multiple values:** Observables can emit zero, one, or multiple values over time, whereas Promises can only resolve with a single value.
+**Lazy execution:** Observables are lazily executed, which means that they will only start emitting values when they are subscribed to. Promises are eagerly executed, which means that they start executing as soon as they are created.
+**Cancellation:** Observables can be cancelled, which means that they will stop emitting values and release any resources they are using. Promises cannot be cancelled.
+**Error handling:** Observables allow you to handle errors in a more flexible way, by using operators like catchError and retry. Promises only allow you to handle errors using the catch method.
 Here's an example that demonstrates the difference between a Promise and an Observable:
 
 ```javascript
@@ -649,6 +641,7 @@ In this example, we use a Promise and an Observable to fetch some data from an A
 
 In the Observable example, we use the Observable constructor to create a new Observable that wraps the fetch function. Inside the Observable, we use the observer object to emit the parsed JSON data using the next method, complete the Observable using the complete method, or emit an error using the error method. We then subscribe to the Observable using the subscribe method, passing in callback functions to handle the emitted data, errors, and completion. Finally, we store the subscription object in a variable so that we can later unsubscribe from the Observable if we want to cancel it.
 
+---
 
 #### What is a higher-order component in React?
 
@@ -679,6 +672,7 @@ const MyComponentWithLoading = withLoading(MyComponent);
 <MyComponentWithLoading loading={true} />
 ```
 
+---
 
 #### How do you use a higher-order component in React?
 
@@ -747,7 +741,7 @@ In this example, the withData function is the HOC that adds the data loading fun
 
 To use the HOC, you simply pass the original component (MyComponent) as an argument to the HOC function (withData). The result of calling the HOC function is a new component (MyComponentWithData) that you can use just like any other React component.
 
-
+---
 
 #### What is Redux in React?
 
@@ -755,13 +749,14 @@ Redux is a state management library for JavaScript applications, and it is commo
 
 The core concepts of Redux are:
 
-Store: A store is an object that holds the application's state tree. The state is read-only, which means that the only way to change it is by dispatching an action. When the state changes, the store notifies all subscribed components.
-Actions: Actions are plain JavaScript objects that describe what happened in an application. They contain a type field that specifies the type of action being performed, as well as any data required to perform the action.
-Reducers: Reducers are pure functions that take the current state and an action, and return a new state. They do not modify the current state directly, but instead return a new state that represents the updated state of the application.
-Dispatch: Dispatch is a method on the store that is used to send an action to the store. When an action is dispatched, the store calls the appropriate reducer and updates the state of the application.
+**Store:** A store is an object that holds the application's state tree. The state is read-only, which means that the only way to change it is by dispatching an action. When the state changes, the store notifies all subscribed components.
+**Actions:** Actions are plain JavaScript objects that describe what happened in an application. They contain a type field that specifies the type of action being performed, as well as any data required to perform the action.
+**Reducers:** Reducers are pure functions that take the current state and an action, and return a new state. They do not modify the current state directly, but instead return a new state that represents the updated state of the application.
+**Dispatch:** Dispatch is a method on the store that is used to send an action to the store. When an action is dispatched, the store calls the appropriate reducer and updates the state of the application.
+
 Redux is commonly used with React because it provides a clear separation of concerns between the state management and the view layer. React components can subscribe to the store and receive updates when the state changes, making it easy to keep the UI in sync with the application state.
 
-
+---
 
 #### How do you use Redux in React?
 To use Redux in a React application, you'll need to install the redux and react-redux packages using npm or yarn. Once you have those installed, here are the general steps to use Redux in a React application:
