@@ -1,20 +1,13 @@
-
-# Project Title
-
-A brief description of what this project does and who it's for
-
 #### What is the difference between let, const and var in JavaScript?
 
 In JavaScript, let, const, and var are all used to declare variables, but they differ in terms of their scope, hoisting behavior, and mutability.
 
-var:
-
+**var:**
 Variables declared with var are function-scoped, meaning that they are accessible within the function in which they are declared, or globally if they are declared outside of a function.
 var variables are also hoisted to the top of their scope, which means that they can be accessed before they are declared.
 var variables can be reassigned and their values can be changed.
 Example:
 
-javascript
 ```javascript
 function example() {
   var x = 10;
@@ -26,14 +19,12 @@ function example() {
 }
 example();
 ```
-let:
-
+**let:**
 Variables declared with let are block-scoped, meaning that they are accessible only within the block in which they are declared (including any nested blocks).
 let variables are not hoisted, which means that they cannot be accessed before they are declared.
 let variables can be reassigned but not redeclared within the same scope.
 Example:
 
-javascript
 ```javascript
 function example() {
   let x = 10;
@@ -45,14 +36,12 @@ function example() {
 }
 example();
 ```
-const:
-
+**const:**
 Variables declared with const are also block-scoped, meaning that they are accessible only within the block in which they are declared (including any nested blocks).
 const variables are not hoisted, which means that they cannot be accessed before they are declared.
 const variables cannot be reassigned or redeclared within the same scope.
 Example:
 
-javascript
 ```javascript
 
 function example() {
@@ -65,42 +54,43 @@ function example() {
 }
 example();
 ```
-
+---
 
 #### What is the difference between a function declaration and a function expression in JavaScript?
 
 In JavaScript, there are two ways to define functions: function declarations and function expressions. Although they both create functions, there are some important differences between them.
 
-Function Declaration:
+**Function Declaration:**
 A function declaration is a statement that defines a function with a specified name. It consists of the function keyword, followed by the function name, a list of parameters (wrapped in parentheses), and the function body (wrapped in curly braces).
 
 Example:
 
-javascript
 ```javascript
-
 function add(x, y) {
   return x + y;
 }
 ```
-Function Expression:
+
+**Function Expression:**
 A function expression is an expression that defines a function and assigns it to a variable or a property of an object. It consists of the function keyword, followed by an optional name (if you omit the name, it is called an anonymous function), a list of parameters (wrapped in parentheses), and the function body (wrapped in curly braces).
 
 Example:
 
-javascript
 ```javascript
 
 const add = function(x, y) {
   return x + y;
 }
 ```
-Differences:
 
-Function declarations are hoisted, which means that they are available for use before the execution of the code starts, whereas function expressions are not hoisted.
-Function declarations are statements and can be used anywhere a statement can be used, whereas function expressions are used as values and can be used wherever a value can be used (e.g., as arguments to other functions).
-Function declarations must have a name, whereas function expressions can be anonymous (i.e., have no name).
-Function declarations can be called before they are defined, whereas function expressions can only be called after they are defined.
+**Differences:**
+
++ Function declarations are hoisted, which means that they are available for use before the execution of the code starts, whereas function expressions are not hoisted.
++ Function declarations are statements and can be used anywhere a statement can be used, whereas function expressions are used as values and can be used wherever a value can be used (e.g., as arguments to other functions).
++ Function declarations must have a name, whereas function expressions can be anonymous (i.e., have no name).
++ Function declarations can be called before they are defined, whereas function expressions can only be called after they are defined.
+
+--
 
 #### What is hoisting in JavaScript?
 
@@ -108,13 +98,12 @@ Hoisting is a JavaScript mechanism where variables and function declarations are
 
 However, it is important to note that only the declarations are hoisted, not the assignments. For example, if a variable is declared and assigned a value later in the code, only the declaration will be hoisted to the top of the scope, not the assignment.
 
-Hoisting occurs in two phases: the creation phase and the execution phase. During the creation phase, the JavaScript engine creates the global object, sets up memory space for variables and functions, and assigns default values to them. In the case of variables, their values are set to undefined.
+**Hoisting occurs in two phases:** the creation phase and the execution phase. During the creation phase, the JavaScript engine creates the global object, sets up memory space for variables and functions, and assigns default values to them. In the case of variables, their values are set to undefined.
 
 During the execution phase, the code is executed line by line, and variables are assigned their actual values. Functions, however, are fully hoisted during the creation phase, meaning that they can be called anywhere in the code, even before their declaration.
 
 Here is an example of hoisting in action:
 
-javascript
 ```javascript
 console.log(x); // Output: undefined
 var x = 10;
@@ -123,17 +112,16 @@ In this example, even though the variable x is not declared until the second lin
 
 It is generally considered a good practice to declare variables and functions at the beginning of their respective scopes, to avoid any confusion or unexpected behavior due to hoisting.
 
-
+---
 
 #### What is the difference between an arrow function and a regular function in JavaScript?
 
 In JavaScript, there are two ways to define functions: regular functions and arrow functions. Although they both create functions, there are some important differences between them.
 
-Arrow functions were introduced in ES6 as a shorthand syntax for creating functions. Here are some of the key differences:
+Arrow functions were introduced in **ES6 as a shorthand syntax** for creating functions. Here are some of the key differences:
 
-Syntax:
+**Syntax:**
 Regular functions use the function keyword followed by the function name, parameter list (wrapped in parentheses), and the function body (wrapped in curly braces).
-javascript
 ```javascript
 function add(x, y) {
   return x + y;
@@ -144,19 +132,18 @@ Arrow functions use an arrow (=>) instead of the function keyword, and the param
 ```javascript
 const add = (x, y) => x + y;
 ```
-this keyword:
+**this keyword:**
 In a regular function, the value of this is determined by how the function is called, which can lead to some confusion or unexpected behavior.
 In an arrow function, this is lexically bound, meaning that it is set to the value of this in the surrounding context, which is usually the parent scope. This can make arrow functions easier to reason about and can help prevent some common errors.
 
-arguments object:
+**arguments object:**
 In a regular function, the arguments object is an array-like object that contains all of the arguments passed to the function.
 In an arrow function, the arguments object is not available, which can be an advantage or a disadvantage depending on the situation.
 
-Usage:
+**Usage:**
 Regular functions can be used for any type of function, while arrow functions are particularly useful for shorter functions that don't require complex logic or multiple lines of code.
 Here's an example of a regular function and an arrow function that do the same thing:
 
-javascript
 ```javascript
 // Regular function
 function multiply(x, y) {
@@ -168,10 +155,10 @@ const multiply = (x, y) => x * y;
 ```
 Ultimately, the choice between regular functions and arrow functions depends on the specific use case and personal preference.
 
-
+---
 
 #### What is a generator function in JavaScript?
-A generator function is a special type of function in JavaScript that allows you to control the iteration over a sequence of values. When a generator function is called, it returns a generator object, which can be used to generate a series of values on demand, rather than all at once.
+A generator function is a special type of function in JavaScript that allows you to **control the iteration over a sequence of values.** When a generator function is called, it returns a generator object, which can be used to generate a series of values on demand, rather than all at once.
 
 Generator functions are defined using the function* syntax (note the asterisk). They use the yield keyword to define the sequence of values to be returned. Each time the yield keyword is encountered, the function returns the current value and "pauses" execution, allowing the calling code to resume the iteration when it's ready.
 
@@ -197,12 +184,11 @@ Each time the generator.next() method is called, the generator function resumes 
 
 Generator functions can also be used to implement infinite sequences or generate values based on external events, making them a powerful tool in JavaScript.
 
-
-
+---
 
 #### How do you use a generator function in JavaScript?
 
-To use a generator function in JavaScript, you first need to define the generator function using the function* syntax. Inside the generator function, you can use the yield keyword to return values one at a time.
+To use a generator function in JavaScript, you first need to define the generator function using the **function* syntax**. Inside the generator function, you can use the yield keyword to return values one at a time.
 
 Here's an example of a generator function that generates an infinite sequence of random numbers:
 
@@ -240,12 +226,13 @@ This code will generate five random numbers and output them to the console.
 0.6567341319190859
 ```
 
+---
 
 #### What is the difference between call, apply and bind in JavaScript?
 
 In JavaScript, call, apply, and bind are methods that allow you to set the this value and pass arguments to a function.
 
-The main differences between them are:
+**The main differences between them are:**
 
 call and apply are used to invoke a function immediately, while bind returns a new function with the this value and arguments bound.
 call and apply take the this value as the first argument, while bind takes the this value as the first argument and allows you to pass additional arguments.
@@ -277,7 +264,7 @@ To create a new function with a bound this value and arguments, you can use bind
 
 In this example, the sayHello function is called three times using call, apply, and bind, respectively, with different arguments. The this value is set to the obj object, which has a name property of 'Alice'. The output shows the result of calling the function with the specified arguments and this value.
 
-
+---
 
 #### How do you use call, apply and bind in JavaScript?
 
@@ -310,11 +297,11 @@ To create a new function with a bound this value and arguments, you can use bind
 
 In this example, the sayHello function is called three times using call, apply, and bind, respectively, with different arguments. The this value is set to the obj object, which has a name property of 'Alice'. The output shows the result of calling the function with the specified arguments and this value.
 
-
+---
 
 #### What is a higher-order function in JavaScript?
 
-In JavaScript, a higher-order function is a function that takes one or more functions as arguments or returns a function as its result. This means that higher-order functions can operate on functions themselves, treating them like any other type of data.
+In JavaScript, a higher-order function is a function that **takes one or more functions as arguments or returns a function as its result**. This means that higher-order functions can operate on functions themselves, treating them like any other type of data.
 
 Higher-order functions can be used to create more abstract and reusable code, by separating concerns and allowing functions to be composed together in different ways.
 
@@ -344,7 +331,7 @@ In this example, setTimeout is a higher-order function because it takes a functi
 
 Higher-order functions are a powerful feature of JavaScript and can be used to create more expressive and flexible code.
 
-
+---
 
 #### How do you use a higher-order function in JavaScript?
 
@@ -389,13 +376,13 @@ In this example, multiplyBy is a higher-order function that takes a number facto
 
 These are just a few examples of how to use higher-order functions in JavaScript. Higher-order functions are a powerful feature that can make your code more expressive and flexible, and allow you to create more reusable and composable code.
 
-
+---
 
 #### What is the difference between map, filter and reduce in JavaScript?
 
 In JavaScript, map, filter, and reduce are three commonly used array methods that are used to perform different kinds of operations on arrays.
 
-map: The map method creates a new array by calling a function on each element of an existing array, and using the returned value as the corresponding element of the new array. The original array is not modified.
+**map:** The map method creates a new array by calling a function on each element of an existing array, and using the returned value as the corresponding element of the new array. The original array is not modified.
 ```javascript
 const numbers = [1, 2, 3, 4];
 
@@ -407,7 +394,7 @@ console.log(squared); // Output: [1, 4, 9, 16]
 ```
 In this example, the map method is used to create a new array called squared which contains the squares of each element of the original numbers array.
 
-filter: The filter method creates a new array by filtering the elements of an existing array based on a condition specified in a function. Only elements that satisfy the condition are included in the new array. The original array is not modified.
+**filter:** The filter method creates a new array by filtering the elements of an existing array based on a condition specified in a function. Only elements that satisfy the condition are included in the new array. The original array is not modified.
 ```javascript
 const numbers = [1, 2, 3, 4];
 
@@ -420,7 +407,7 @@ console.log(even); // Output: [2, 4]
 
 In this example, the filter method is used to create a new array called even which contains only the even numbers from the original numbers array.
 
-reduce: The reduce method reduces an array to a single value by repeatedly calling a function on each element of the array and accumulating the result. The function takes two arguments: an accumulator and the current element of the array. The accumulator is updated on each iteration and its final value is returned as the result of the reduce method.
+**reduce:** The reduce method reduces an array to a single value by repeatedly calling a function on each element of the array and accumulating the result. The function takes two arguments: an accumulator and the current element of the array. The accumulator is updated on each iteration and its final value is returned as the result of the reduce method.
 ```javascript
 const numbers = [1, 2, 3, 4];
 
@@ -434,13 +421,13 @@ In this example, the reduce method is used to calculate the sum of all the eleme
 
 In summary, the main difference between map, filter, and reduce is the type of operation they perform on an array. map is used to transform each element of an array into a new value, filter is used to select elements from an array based on a condition, and reduce is used to reduce an array to a single value by applying a function to each element.
 
-
+---
 
 #### How do you use map, filter and reduce in JavaScript?
 
 Here are some examples of how to use map, filter, and reduce in JavaScript:
 
-map: To use the map method, you call it on an array and pass in a function as an argument. This function takes the current element of the array as its argument, and should return a new value for that element. The map method returns a new array with the transformed values.
+**map:** To use the map method, you call it on an array and pass in a function as an argument. This function takes the current element of the array as its argument, and should return a new value for that element. The map method returns a new array with the transformed values.
 Example: Transform an array of numbers by doubling each element.
 
 ```javascript
@@ -452,7 +439,7 @@ const doubled = numbers.map(function(num) {
 
 console.log(doubled); // Output: [2, 4, 6, 8]
 ```
-filter: To use the filter method, you call it on an array and pass in a function as an argument. This function should return true or false depending on whether the current element should be included in the new array. The filter method returns a new array with only the elements that returned true.
+**filter:** To use the filter method, you call it on an array and pass in a function as an argument. This function should return true or false depending on whether the current element should be included in the new array. The filter method returns a new array with only the elements that returned true.
 Example: Filter an array of numbers to only include even numbers.
 
 ```javascript
@@ -464,7 +451,7 @@ const even = numbers.filter(function(num) {
 
 console.log(even); // Output: [2, 4]
 ```
-reduce: To use the reduce method, you call it on an array and pass in a function as an argument. This function takes two arguments: an accumulator and the current element of the array. The function should return the updated value of the accumulator. The reduce method returns the final value of the accumulator.
+**reduce:** To use the reduce method, you call it on an array and pass in a function as an argument. This function takes two arguments: an accumulator and the current element of the array. The function should return the updated value of the accumulator. The reduce method returns the final value of the accumulator.
 Example: Calculate the sum of an array of numbers.
 
 ```javascript
@@ -478,11 +465,11 @@ console.log(sum); // Output: 10
 ```
 In this example, the reduce method is called on the numbers array, and the function passed in takes two arguments: an accumulator (initialized as 0), and the current element of the array. On each iteration, the current element is added to the accumulator, and the updated accumulator value is returned. At the end, the final value of the accumulator (which is the sum of all the numbers) is returned.
 
-
+---
 
 #### What is a curried function in JavaScript?
 
-A curried function in JavaScript is a function that takes multiple arguments one at a time instead of taking all of its arguments at once. It works by returning a new function that takes the next argument, and so on until all the arguments have been received and the final result can be returned.
+A curried function in JavaScript is a **function that takes multiple arguments one at a time instead of taking all of its arguments at once.** It works by returning a new function that takes the next argument, and so on until all the arguments have been received and the final result can be returned.
 
 Here's an example of a curried function:
 
@@ -505,7 +492,7 @@ Finally, double is called with the argument 3, which results in the value 6 bein
 
 Currying can be useful for creating more flexible and reusable functions, as well as for simplifying code and reducing repetition. It allows you to create functions that are more composable and easier to understand.
 
-
+---
 
 #### How do you use a curried function in JavaScript?
 
@@ -530,7 +517,7 @@ Finally, addFive is called with the argument 3, which results in the value 8 bei
 
 This example demonstrates the power of currying for creating more flexible and reusable functions. By creating a function that can be partially applied with arguments, you can create more specialized versions of that function that can be used in a variety of situations.
 
-
+---
 
 #### What is a closure in JavaScript?
 
@@ -556,7 +543,7 @@ In this example, outer is a function that defines a local variable message and a
 
 Closures are powerful because they allow functions to access variables from their parent scope, even if those variables are no longer in scope. This can be useful for creating private variables or functions that can only be accessed by certain code. Closures are also used extensively in functional programming, where they allow functions to be composed together in powerful ways.
 
-
+---
 
 #### How do you use closures in JavaScript?
 
@@ -585,11 +572,11 @@ The counter constant is assigned the returned function from makeCounter. When co
 
 This example demonstrates the power of closures for creating functions that "remember" state and can be used in a variety of situations. By creating a closure with local variables, you can create functions that have private data and can only be accessed in certain ways.
 
-
+---
 
 #### What is memoization in JavaScript?
 
-Memoization is a technique used in computer science and programming to speed up the execution of functions by caching the results of expensive function calls and returning the cached result when the same inputs occur again.
+Memoization is a technique used in computer science and programming to **speed up the execution of functions by caching the results of expensive function calls and returning the cached result when the same inputs occur again.**
 
 In JavaScript, memoization can be implemented using closures. Here's an example:
 
@@ -630,7 +617,7 @@ The fib function is a recursive function that calculates the nth Fibonacci numbe
 
 This example demonstrates how memoization can be used to optimize the performance of functions that are called frequently with the same input. By caching the results of expensive function calls, you can avoid redundant computation and speed up your code.
 
-
+---
 
 #### How do you use memoization in JavaScript?
 
@@ -672,11 +659,11 @@ The add function is a simple function that adds two numbers together. When memoi
 
 This example demonstrates how memoization can be used to optimize the performance of functions that are called frequently with the same input. By caching the results of expensive function calls, you can avoid redundant computation and speed up your code.
 
-
+---
 
 #### What is a decorator function in JavaScript?
 
-A decorator function in JavaScript is a higher-order function that takes a function as an argument and returns a new function with added functionality. The decorator function wraps the original function, adding new behavior to it, without modifying its source code.
+A decorator function in JavaScript is a **higher-order function** that takes a function as an argument and returns a new function with added functionality. The decorator function wraps the original function, adding new behavior to it, without modifying its source code.
 
 Here's an example of a decorator function in JavaScript:
 
@@ -704,7 +691,7 @@ The add function is a simple function that adds two numbers together. When decor
 
 This example demonstrates how a decorator function can be used to add new behavior to an existing function without modifying its source code. By wrapping the original function with a decorator function, you can reuse the original function with added functionality, making it more versatile and easier to maintain.
 
-
+---
 
 #### How do you use a decorator function in JavaScript?
 
