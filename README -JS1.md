@@ -16,17 +16,17 @@ JavaScript is also widely used in server-side programming, such as with Node.js,
 #### What are the advantages of using JavaScript?
 There are several advantages of using JavaScript in web development:
 
-Client-side execution: JavaScript runs in the user's web browser, which means it doesn't require server-side processing, reducing the workload on the server.
-Interactivity: JavaScript allows developers to create dynamic, interactive web pages that respond to user actions, such as clicking buttons or scrolling.
+**Client-side execution:** JavaScript runs in the user's web browser, which means it doesn't require server-side processing, reducing the workload on the server.
+**Interactivity:** JavaScript allows developers to create dynamic, interactive web pages that respond to user actions, such as clicking buttons or scrolling.
 
-Versatility: JavaScript can be used for a wide variety of tasks, from simple animations to complex, interactive web applications.
+**Versatility:** JavaScript can be used for a wide variety of tasks, from simple animations to complex, interactive web applications.
 Cross-platform compatibility: JavaScript runs on all modern web browsers and is supported by most mobile devices, making it a popular choice for building responsive, mobile-friendly websites.
 
-Large community and resources: JavaScript has a large and active developer community, with many libraries, frameworks, and plugins available to simplify development and increase functionality.
+**Large community and resources:** JavaScript has a large and active developer community, with many libraries, frameworks, and plugins available to simplify development and increase functionality.
 
-Fast development: JavaScript is easy to learn and has a low entry barrier, allowing developers to quickly create prototypes and iterate on designs.
+**Fast development:** JavaScript is easy to learn and has a low entry barrier, allowing developers to quickly create prototypes and iterate on designs.
 
-SEO friendly: JavaScript is search engine optimization (SEO) friendly, meaning that search engines can easily index content built with JavaScript, helping to improve a website's search engine ranking.
+**SEO friendly:** JavaScript is search engine optimization (SEO) friendly, meaning that search engines can easily index content built with JavaScript, helping to improve a website's search engine ranking.
 
 
 #### What are the disadvantages of using JavaScript?
