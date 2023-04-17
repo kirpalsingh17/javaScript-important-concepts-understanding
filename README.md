@@ -3249,9 +3249,13 @@ Redux is a state management library for JavaScript applications, and it is commo
 The core concepts of Redux are:
 
 **Store:** A store is an object that holds the application's state tree. The state is read-only, which means that the only way to change it is by dispatching an action. When the state changes, the store notifies all subscribed components.
+
 **Actions:** Actions are plain JavaScript objects that describe what happened in an application. They contain a type field that specifies the type of action being performed, as well as any data required to perform the action.
+
 **Reducers:** Reducers are pure functions that take the current state and an action, and return a new state. They do not modify the current state directly, but instead return a new state that represents the updated state of the application.
+
 **Dispatch:** Dispatch is a method on the store that is used to send an action to the store. When an action is dispatched, the store calls the appropriate reducer and updates the state of the application.
+
 
 Redux is commonly used with React because it provides a clear separation of concerns between the state management and the view layer. React components can subscribe to the store and receive updates when the state changes, making it easy to keep the UI in sync with the application state.
 
