@@ -2202,8 +2202,11 @@ Functional programming is a programming paradigm that **emphasizes the use of fu
 In JavaScript, functional programming is supported through a variety of features, including higher-order functions, closures, and anonymous functions. Here are some key principles of functional programming in JavaScript:
 
 **Pure Functions:** A pure function is a function that returns a value based only on its input arguments, without modifying any external state or producing side effects. Pure functions are deterministic, meaning they always produce the same output for the same input.
+
 **Immutability:** Functional programming encourages immutability, or the use of data structures that cannot be modified once they are created. This helps to prevent unexpected side effects and makes it easier to reason about the behavior of functions.
+
 **Higher-Order Functions:** Higher-order functions are functions that take other functions as arguments or return functions as their result. Higher-order functions are a key feature of functional programming, since they allow for the composition of complex functionality from simpler building blocks.
+
 **Recursion:** Recursion is a technique where a function calls itself to solve a problem. Recursion is often used in functional programming to process data structures, since it can provide an elegant way to iterate over collections of data.
 
 Overall, functional programming is a powerful approach to programming that can help to reduce bugs, improve code readability, and make it easier to reason about the behavior of functions. While JavaScript was not originally designed for functional programming, the language has evolved to support many functional programming concepts, making it a popular choice for functional programming enthusiasts.
