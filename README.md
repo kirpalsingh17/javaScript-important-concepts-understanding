@@ -3098,9 +3098,13 @@ On the other hand, Observables represent a stream of values that will be availab
 Here are some key differences between Promises and Observables:
 
 **Multiple values:** Observables can emit zero, one, or multiple values over time, whereas Promises can only resolve with a single value.
+
 **Lazy execution:** Observables are lazily executed, which means that they will only start emitting values when they are subscribed to. Promises are eagerly executed, which means that they start executing as soon as they are created.
+
 **Cancellation:** Observables can be cancelled, which means that they will stop emitting values and release any resources they are using. Promises cannot be cancelled.
+
 **Error handling:** Observables allow you to handle errors in a more flexible way, by using operators like catchError and retry. Promises only allow you to handle errors using the catch method.
+
 Here's an example that demonstrates the difference between a Promise and an Observable:
 
 ```javascript
