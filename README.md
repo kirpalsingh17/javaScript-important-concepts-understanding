@@ -3460,14 +3460,14 @@ Redux is commonly used with React because it provides a clear separation of conc
 #### How do you use Redux in React?
 To use Redux in a React application, you'll need to install the redux and react-redux packages using npm or yarn. Once you have those installed, here are the general steps to use Redux in a React application:
 
-Create a Redux Store: The first step is to create a Redux store, which will hold the state of your application. You can create a store by using the createStore function provided by Redux.
+**Create a Redux Store:** The first step is to create a Redux store, which will hold the state of your application. You can create a store by using the createStore function provided by Redux.
 ```javascript
 import { createStore } from 'redux';
 import rootReducer from './reducers';
 
 const store = createStore(rootReducer);
 ```
-Create Reducers: Reducers are functions that update the state of the store based on the actions that are dispatched. You should create one or more reducers that handle the actions in your application.
+**Create Reducers:** Reducers are functions that update the state of the store based on the actions that are dispatched. You should create one or more reducers that handle the actions in your application.
 ```javascript
 const initialState = {
   count: 0
@@ -3484,7 +3484,7 @@ function counterReducer(state = initialState, action) {
   }
 }
 ```
-Create Actions: Actions are plain objects that represent something that happened in your application. You should create one or more action creators that return these action objects.
+**Create Actions:** Actions are plain objects that represent something that happened in your application. You should create one or more action creators that return these action objects.
 ```javascript
 function increment() {
   return { type: 'INCREMENT' };
@@ -3494,7 +3494,7 @@ function decrement() {
   return { type: 'DECREMENT' };
 }
 ```
-Create React Components: Create React components that will use the store to manage the state of your application. You can use the connect function from react-redux to connect your components to the Redux store.
+**Create React Components:** Create React components that will use the store to manage the state of your application. You can use the connect function from react-redux to connect your components to the Redux store.
 ```javascript
 import { connect } from 'react-redux';
 
@@ -3514,7 +3514,7 @@ const mapStateToProps = (state) => ({
 
 export default connect(mapStateToProps)(Counter);
 ```
-Render Components: Finally, render your React components and wrap your top-level component with the Provider component from react-redux, passing in your Redux store as a prop.
+**Render Components:** Finally, render your React components and wrap your top-level component with the Provider component from react-redux, passing in your Redux store as a prop.
 ```javascript
 import { Provider } from 'react-redux';
 import store from './store';
