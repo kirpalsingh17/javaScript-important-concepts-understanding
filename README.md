@@ -1,3 +1,199 @@
+[What is JavaScript?](#what-is-javascript)
+
+[What are the advantages of using JavaScript?](#what-are-the-advantages-of-using-javascript)
+
+[What are the disadvantages of using JavaScript?](#what-are-the-advantages-of-using-javascript)
+
+[How do you declare a variable in JavaScript?]()
+
+[What is the difference between let and var in JavaScript?]()
+
+[What is the difference between == and === in JavaScript?]()
+
+[How do you create a function in JavaScript?]()
+
+[What is an event in JavaScript?]()
+
+[What is a callback function in JavaScript?]()
+
+[What is the difference between synchronous and asynchronous code in JavaScript?]()
+
+[What is a closure in JavaScript?]()
+
+[What is the difference between null and undefined in JavaScript?]()
+
+[How do you check if a variable is undefined in JavaScript?]()
+
+[How do you check if a variable is null in JavaScript?]()
+
+[What is the difference between null and NaN in JavaScript?]()
+
+[What is a prototype in JavaScript?]()
+
+[What is an object in JavaScript?]()
+
+[What is the difference between an array and an object in JavaScript?]()
+
+[How do you add an element to an array in JavaScript?]()
+
+[How do you remove an element from an array in JavaScript?]()
+
+[What is the DOM in JavaScript?]()
+
+[What is an event listener in JavaScript?]()
+
+[How do you create a class in JavaScript?]()
+
+[What is inheritance in JavaScript?]()
+
+[How do you implement inheritance in JavaScript?]()
+
+[What is a module in JavaScript?]()
+
+[How do you create a module in JavaScript?]()
+
+[What is the difference between synchronous and asynchronous module loading in JavaScript?]()
+
+[What is a promise in JavaScript?]()
+
+[How do you create a promise in JavaScript?]()
+
+[How do you handle errors in a promise in JavaScript?]()
+
+[What is the difference between resolve and reject in a promise in JavaScript?]()
+
+[What is the difference between then and catch in a promise in JavaScript?]()
+
+[What is the difference between a callback and a promise in JavaScript?]()
+
+[How do you use the fetch API to make an HTTP request in JavaScript?]()
+
+[What is a closure in JavaScript?]()
+
+[How do you use closures in JavaScript?]()
+
+[What is a callback function in JavaScript?]()
+
+[How do you use a callback function in JavaScript?]()
+
+[What is the difference between a callback function and a promise in JavaScript?]()
+
+[What is the difference between let, const and var in JavaScript?]()
+
+[What is the difference between a function declaration and a function expression in JavaScript?]()
+
+[What is hoisting in JavaScript?]()
+
+[What is the difference between an arrow function and a regular function in JavaScript?]()
+
+[What is a generator function in JavaScript?]()
+
+[How do you use a generator function in JavaScript?]()
+
+[What is the difference between call, apply and bind in JavaScript?]()
+
+[How do you use call, apply and bind in JavaScript?]()
+
+[What is a higher-order function in JavaScript?]()
+
+[How do you use a higher-order function in JavaScript?]()
+
+[What is the difference between map, filter and reduce in JavaScript?]()
+
+[How do you use map, filter and reduce in JavaScript?]()
+
+[What is a curried function in JavaScript?]()
+
+[How do you use a curried function in JavaScript?]()
+
+[What is a closure in JavaScript?]()
+
+[How do you use closures in JavaScript?]()
+
+[What is memoization in JavaScript?]()
+
+[How do you use memoization in JavaScript?]()
+
+[What is a decorator function in JavaScript?]()
+
+[How do you use a decorator function in JavaScript?]()
+
+[What is event bubbling in JavaScript?]()
+
+[How do you stop event bubbling in JavaScript?]()
+
+[What is event delegation in JavaScript?]()
+
+[How do you use event delegation in JavaScript?]()
+
+[What is the difference between client-side and server-side JavaScript?]()
+
+[What is the difference between an object and a function in JavaScript?]()
+
+[What is a singleton in JavaScript?]()
+
+[How do you create a singleton in JavaScript?]()
+
+[What is functional programming in JavaScript?]()
+
+[How do you write functional programming code in JavaScript?]()
+
+[What is the difference between imperative and declarative programming in JavaScript?]()
+
+[How do you write declarative programming code in JavaScript?]()
+
+[What is a monad in JavaScript?]()
+
+[How do you use a monad in JavaScript?]()
+
+[What is a functor in JavaScript?]()
+
+[How do you use a functor in JavaScript?]()
+
+[What is a monoid in JavaScript?]()
+
+[How do you use a monoid in JavaScript?]()
+
+[What is the difference between prototypal and classical inheritance in JavaScript?]()
+
+[How do you implement prototypal inheritance in JavaScript?]()
+
+[How do you implement classical inheritance in JavaScript?]()
+
+[What is the difference between a closure and a module in JavaScript?]()
+
+[How do you use the this keyword in JavaScript?]()
+
+[What is the difference between call, apply, and bind in JavaScript?]()
+
+[How do you use the apply method in JavaScript?]()
+
+[How do you use the bind method in JavaScript?]()
+
+[What is a factory function in JavaScript?]()
+
+[How do you use a factory function in JavaScript?]()
+
+[What is a promise in JavaScript?]()
+
+[How do you use a promise in JavaScript?]()
+
+[What is a callback function in JavaScript?]()
+
+[How do you use a callback function in JavaScript?]()
+
+[What is the difference between a callback function and a promise in JavaScript?]()
+
+[What is the difference between a promise and an observable in JavaScript?]()
+
+[What is a higher-order component in React?]()
+
+[How do you use a higher-order component in React?]()
+
+[What is Redux in React?]()
+
+[How do you use Redux in React?]()
+
 #### What is JavaScript?
 JavaScript is a high-level, dynamic programming language that is used mainly for web development. It allows developers to create interactive and dynamic web pages by adding interactivity, animations, and other dynamic elements to the webpage.
 
